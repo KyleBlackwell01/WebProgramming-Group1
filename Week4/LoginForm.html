@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Login Page</title>
+    </head>
+
+    <style>
+        .myform
+        {
+            background-color: white;
+            margin: 0 auto;
+            padding: 25px 100px; 
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            box-shadow: 2px 5px 2px grey;
+        }
+
+        .body-background
+        {
+            text-align: center;
+            background-color: #68be4a;
+        }
+
+        .myform input
+        {
+            border: none;
+            padding: 25px 25px;
+            background-color: #f2f2f2;
+            width: 100%;
+            height: 50%;
+            display: inline-block;
+            margin: 0 auto;
+        }
+
+        .myform button
+        {
+            background-color: #00b241;
+            text-transform: uppercase;
+            border: none;
+            color: white;
+            padding: 20px 100px;
+            min-width: 80%;
+            font-size: 20px;
+        }
+    </style>
+
+    <body class="body-background">
+        <form class="myform">
+            <div>
+                <input type="text" name="username" placeholder="username" />
+            </div>
+            <div>
+                <input type="text" name="password" placeholder="password" />
+            </div>
+            <div>
+                <button>Login</button>
+            </div>
+            <div>
+                Not registered? <a href="">Create an account</a>
+            </div>
+        </form>
+    </body>
+</html>
