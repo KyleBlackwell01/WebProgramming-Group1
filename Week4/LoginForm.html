@@ -17,6 +17,12 @@
             box-shadow: 2px 5px 2px grey;
         }
 
+        .myform .myform-label
+        {
+            font-family: Arial;
+            font-size: 16px;
+        }
+
         .body-background
         {
             text-align: center;
@@ -34,6 +40,20 @@
             margin: 0 auto;
         }
 
+        .myform .username
+        {
+            padding: 0 auto;
+            margin-bottom: 25px;
+        }
+
+        .myform .password
+        {
+            padding: 0 auto;
+            margin-bottom: 25px;
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
         .myform button
         {
             background-color: #00b241;
@@ -43,21 +63,22 @@
             padding: 20px 100px;
             min-width: 80%;
             font-size: 20px;
+            margin-bottom: 25px;
         }
     </style>
 
     <body class="body-background">
         <form class="myform">
-            <div>
+            <div class="username">
                 <input type="text" name="username" placeholder="username" />
             </div>
-            <div>
+            <div class="password">
                 <input type="text" name="password" placeholder="password" />
             </div>
             <div>
                 <button>Login</button>
             </div>
-            <div>
+            <div class="myform-label">
                 Not registered? <a href="">Create an account</a>
             </div>
         </form>
