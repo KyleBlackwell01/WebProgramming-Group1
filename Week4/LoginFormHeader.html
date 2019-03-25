@@ -13,11 +13,12 @@
         }
         .myForm
         {
-            background-color: white;
             margin: 0 auto;
-            padding: 20px 50px; 
+            padding: 5px 5px; 
             right: 0;
+            width:25%;
             position: fixed;
+            float: right;
         }
         .myForm input
         {
@@ -38,23 +39,72 @@
         {
             font-size: 25px;
             font-weight: bold;
-            line-height: 25px;
+            float: left;
         }
+
+        .information
+        {
+            font-size: 16px;
+            margin: 0 auto;
+            text-align: center;
+            float: left;
+        }
+                .form-inline {  
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        }
+
+        .form-inline label {
+        margin: 5px 10px 5px 0;
+        }
+
+        .form-inline input {
+        vertical-align: middle;
+        margin: 5px 10px 5px 0;
+        padding: 10px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        }
+
+        .form-inline button {
+        padding: 10px 20px;
+        background-color: dodgerblue;
+        border: 1px solid #ddd;
+        color: white;
+        cursor: pointer;
+        }
+
+        .form-inline button:hover {
+        background-color: royalblue;
+        }
+
     </style>
 
     <body class="body-background">
         <header>
+            <section>
             <div class="heading">
                 Welcome to my Homepage
             </div>
-            <div>
-                <form class="myForm">
-                    <div class="text">
-                        <input type="text" name="username" placeholder="username"/>
-                        <input type="password" name="password" placeholder="password"/>
-                    </div>
-                </form>
-            </div>
+            <form class="form-inline">
+                <input type="text"placeholder="Enter username" name="username">
+                <input type="password" placeholder="Enter password" name="password">
+                <button type="submit">Yes</button>
+              </form>            </div>
+            </section>
         </header>
-    </body>
+        <div>
+        <p class="information">
+                        What slanderous attacks hast thou thrown against my good name, thou contemptible wench?
+                        Whereas I have risen even unto the foremost rank in the Royal Admiralty;
+                        whereas I have on many an occasion partaken in clandestine crusades against the Saracens;
+                        whereas by mine hands have fallen barbarians numbering some fifteen score; whereas I am most skilled in the
+                        ways of the ape warrior;
+                        whereas I am the premier marksman amongst all of our Kingdom's knights: Thou art in my sights but yet
+                        another quarry.
+        </p>
+        </div>
+        
+        </body>
 </html>
