@@ -1,8 +1,8 @@
 <html>
     <head>
-        <title>Login Page</title>
+        <title>Signup Form</title>
     </head>
-
+    
     <style>
         .myform
         {
@@ -15,13 +15,6 @@
             -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
             box-shadow: 2px 5px 2px grey;
-        }
-
-        .myform .myform-label
-        {
-            font-family: Arial;
-            font-size: 16px;
-            text-decoration: none;
         }
 
         .body-background
@@ -39,48 +32,45 @@
             height: 50%;
             display: inline-block;
             margin: 0 auto;
-        }
-
-        .myform .username
-        {
-            padding: 0 auto;
             margin-bottom: 25px;
-        }
-
-        .myform .password
-        {
-            padding: 0 auto;
-            margin-bottom: 25px;
-            min-width: 100%;
-            box-sizing: border-box;
         }
 
         .myform button
         {
-            background-color: #00b241;
+            background-color: orangered;
             text-transform: uppercase;
-            border: none;
+            border-radius: 25px;
             color: white;
             padding: 20px 100px;
             min-width: 80%;
             font-size: 20px;
             margin-bottom: 25px;
         }
+
+        .myform .text
+        {
+            font-family: Arial;
+            font-size: 16px;
+            text-align: center;
+        }
     </style>
 
     <body class="body-background">
         <form class="myform">
-            <div class="username">
-                <input type="text" name="username" placeholder="username" />
-            </div>
-            <div class="password">
-                <input type="text" name="password" placeholder="password" />
+            <div>
+                <input type="text" name="name" placeholder="John Smith"/>
             </div>
             <div>
-                <button>login</button>
+                <input type="text" name="email" placeholder="jsmith@example.com"/>
             </div>
-            <div class="myform-label">
-                Not registered? <a href="">Create an account</a>
+            <div>
+                <input type="text" name="username" placeholder="Username"/>
+            </div>
+            <div>
+                <input type="text" name="password" placeholder="Password..."/>
+            </div>
+            <div>
+                <button>Create my Account</button>
             </div>
         </form>
     </body>
