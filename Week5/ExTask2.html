@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Page Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <form>
+            <div></div>
+                <input type="number" id="num1"/>
+            </div>
+            <div>
+                <select id="method">
+                    <option value="add">+</option>
+                    <option value="subtract">-</option>
+                    <option value="multiply">x</option>
+                    <option value="divide">/</option>
+                </select>
+            </div>
+            <div>
+                <input type="number" id="num2"/>
+                <button type="button" onclick="Calculate()">Click me please!</button>
+            </div>
+            <div>
+                <p id="result">Value</p>
+            </div>
+        </form>
+
+        <script>
+            function Calculate()
+            {
+                var x = parseInt(document.getElementById('num1').value);
+                var y = parseInt(document.getElementById('num2').value);
+                var method = document.getElementById('method').value;
+                var result = document.getElementById('result');
+                document.getElementById("result").innerHTML = Method1(x, y, method);
+
+            }
+
+            function Method1(x, y, method) 
+            {
+                if (method == 'add') 
+                {
+                    return x + y;
+                } else if (method == 'subtract') 
+                {
+                    return x - y;
+                } else if (method == 'divide') 
+                {
+                    return x / y;
+                } else if (method == 'multiply') 
+                {
+                    return x * y;
+                }
+            }
+        </script>
+    </body>
+</html>
