@@ -1,0 +1,25 @@
+.container
+{
+    background-color: lightgrey;
+    margin: 0 auto;
+    padding: 50px 100px; 
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    /* top: 50%;
+    left: 50%;
+    position: absolute; */
+}
+.container button
+{
+    background-color: darkgreen;
+    text-transform: uppercase;
+    color: white;
+    padding: 20px 100px;
+    font-size: 20px;
+    margin: 0 auto;
+    display: inline-block;
+}

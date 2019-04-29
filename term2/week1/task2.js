@@ -4,4 +4,6 @@ while(counter <= 10)
 
         console.log("Counting up... Im at:" + counter);
         counter++;
+        break;
+        
 } 
