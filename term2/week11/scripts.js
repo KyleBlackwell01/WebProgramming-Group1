@@ -1,48 +1,48 @@
-var contentP = document.getElementById("contentHere");
-var buttonC = document.getElementById("ButtonC");
-var buttonD = document.getElementById("ButtonD");
-// var buttonA = document.getElementById("ButtonA");
-var myInput = document.getElementById("myInput");
+// var contentP = document.getElementById("contentHere");
+// var buttonC = document.getElementById("ButtonC");
+// var buttonD = document.getElementById("ButtonD");
+// // var buttonA = document.getElementById("ButtonA");
+// var myInput = document.getElementById("myInput");
 
 
-    // var items = document.querySelectorAll("#contentHere li")
-    //     tab = [], contentP;
+//     // var items = document.querySelectorAll("#contentHere li")
+//     //     tab = [], contentP;
 
-    //     for(var i = 0; i < items.length; i++) {
-    //         tab.push(items[i].innerHTML);
-    //     }
+//     //     for(var i = 0; i < items.length; i++) {
+//     //         tab.push(items[i].innerHTML);
+//     //     }
 
-    //     for(var i = 0; i < items.length; i++) {
-    //         items[i].onclick = function(){
+//     //     for(var i = 0; i < items.length; i++) {
+//     //         items[i].onclick = function(){
 
-    //             contentP = tab.indexOf(this.innerHTML);
-    //             console.log(this.innerHTML + " index = " + contentP);
-    //         }
-    //     }
-
-
-//buttonA.onclick = removeAll;
-buttonC.onclick = ourButtonClick;
-buttonD.onclick = removeItem;
+//     //             contentP = tab.indexOf(this.innerHTML);
+//     //             console.log(this.innerHTML + " index = " + contentP);
+//     //         }
+//     //     }
 
 
-function ourButtonClick()
-{
-    if (myInput.value == "")
-    {
-        alert("Input is required!");
-        return
-    }
-    else
-    {
+// //buttonA.onclick = removeAll;
+// buttonC.onclick = ourButtonClick;
+// buttonD.onclick = removeItem;
 
-        var x = document.getElementsByTagName("LI")[0];
-        x.setAttribute("id", "text");
-        myInput.setAttribute('id',myInput.value);
 
-        contentP.innerHTML += "<li>" + myInput.value + "</li>";
-    }
-}
+// function ourButtonClick()
+// {
+//     if (myInput.value == "")
+//     {
+//         alert("Input is required!");
+//         return
+//     }
+//     else
+//     {
+
+//         var x = document.getElementsByTagName("LI")[0];
+//         x.setAttribute("id", "text");
+//         myInput.setAttribute('id',myInput.value);
+
+//         contentP.innerHTML += "<li>" + myInput.value + "</li>";
+//     }
+// }
 
 // function ourButtonClick()
 // {
@@ -128,3 +128,68 @@ function ourButtonClick()
 //      }
 //    }
 //  } 
+
+
+
+
+
+
+
+
+// function test()
+// {
+
+//     var todo = document.querySelector( '#contentHere' ),
+//         form = document.querySelector("test1"),
+//         field = document.querySelector( 'myInput' );
+        
+//         form.addEventListener( 'submit', function( ev )
+//         {
+//             var text = field.value;
+//             if ( text !== '' ) {
+//             todo.innerHTML += '<li>' + text + ' <button onclick="Delete(this);">Delete</button> </li>';
+//             field.value = '';
+//             //field.focus();
+//         }
+//         ev.preventDefault();
+//         }, false);
+  
+// };
+// function Delete(currentEl)
+// {
+//     currentEl.parentNode.parentNode.removeChild(currentEl.parentNode);
+// };
+
+
+
+
+
+
+
+
+
+
+var inputField = document.getElementById("inputField");
+var addButton = document.getElementById("addButton");
+
+var contentHere = document.getElementById("contentHere");
+addButton.onclick = addButtonClick;
+
+
+function addButtonClick() 
+{
+    // contentHere.innerHTML = "" + inputField.value + "";
+
+    var contentToAdd = document.createElement("li");
+
+    contentToAdd.appendChild(document.createTextNode(inputField.value));
+    contentToAdd.setAttribute("id", 0)
+    contentHere.appendChild(contentToAdd);
+    
+}
+
+function deleteA()
+{
+    var element = document.getElementById(elementId);
+    element.parentNode.removeChild(element);
+}
