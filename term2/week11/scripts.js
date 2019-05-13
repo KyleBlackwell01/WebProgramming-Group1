@@ -169,27 +169,78 @@
 
 
 
-var inputField = document.getElementById("inputField");
-var addButton = document.getElementById("addButton");
+// var inputField = document.getElementById("inputField");
+// var addButton = document.getElementById("addButton");
 
-var contentHere = document.getElementById("contentHere");
-addButton.onclick = addButtonClick;
+// var contentHere = document.getElementById("contentHere");
+// addButton.onclick = addButtonClick;
 
 
-function addButtonClick() 
-{
-    // contentHere.innerHTML = "" + inputField.value + "";
+// function addButtonClick() 
+// {
+//     // contentHere.innerHTML = "" + inputField.value + "";
 
-    var contentToAdd = document.createElement("li");
+//     var contentToAdd = document.createElement("li");
 
-    contentToAdd.appendChild(document.createTextNode(inputField.value));
-    contentToAdd.setAttribute("id", 0)
-    contentHere.appendChild(contentToAdd);
+//     contentToAdd.appendChild(document.createTextNode(inputField.value));
+//     contentToAdd.setAttribute("id", 0)
+//     contentHere.appendChild(contentToAdd);
     
-}
+// }
 
-function deleteA()
-{
-    var element = document.getElementById(elementId);
-    element.parentNode.removeChild(element);
-}
+// function deleteA()
+// {
+//     var element = document.getElementById(elementId);
+//     element.parentNode.removeChild(element);
+// }
+
+
+
+// var addButton = document.getElementById('addButton');
+// //var clearButton = document.getElementById('clearButton');
+// var deleteButton = document.getElementById('deleteButton');
+
+// addButton.addEventListener("click", function(e) {
+//     var text = document.getElementById("inputField").value;
+//     var addItem = document.getElementById('output');
+//     var entry = document.createElement("li");
+//     text += ' <button class="deleteButton">Delete</button>';
+//     entry.innerHTML = text;    
+//     addItem.appendChild(entry);
+// });
+
+// // clearButton.addEventListener("click", function(e) {
+// //     var text = document.getElementById('listItem');
+// //     var addItem = document.getElementById('output');
+// //     addItem.innerHTML = '';
+// //     text.value = '';
+// // });
+
+// $(document).on('click','.deleteButton', function() {
+//     $(this).parent().remove();    
+// });
+
+
+addButton = document.getElementById('addButton');
+clearButton = document.getElementById('clearButton');
+deleteButton = document.getElementById('deleteButton');
+
+addButton.addEventListener("click", function(e) {
+    var text = document.getElementById('listItem').value;
+    var addItem = document.getElementById('output');
+    var entry = document.createElement("li");
+    text += ' <button class="deleteButton">Delete</button>';
+    entry.innerHTML = text;    
+    addItem.appendChild(entry);
+});
+
+clearButton.addEventListener("click", function(e) {
+    var text = document.getElementById('listItem');
+    var addItem = document.getElementById('output');
+    addItem.innerHTML = '';
+    text.value = '';
+});
+
+$(document).on('click','.deleteButton', function() {
+    $(this).parent().remove();    
+});
