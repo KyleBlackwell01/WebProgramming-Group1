@@ -1,0 +1,29 @@
+body
+{
+    display: inline-block;
+}
+
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  cursor: pointer;
+  position: relative;
+  list-style-type: none;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+  
+
+}
+
+ul li:hover {
+  background: #ddd;
+}
+
+
+
+
