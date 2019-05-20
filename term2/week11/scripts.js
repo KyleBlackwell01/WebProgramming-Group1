@@ -3,6 +3,7 @@ var addButton = document.getElementById("addButton");
 var clearButton = document.getElementById("clearButton");
 var selectList = document.getElementById("selectList");
 var x = document.getElementById("selectList").selectedIndex;
+selectList.onclick = ListSelect;
 addButton.onclick = addButtonClick;
 clearButton.onclick = clearButtonClick;
 
@@ -16,7 +17,7 @@ function ListSelect()
 {
     if (selectList.selectedIndex == 0) 
     {
-        return contentHere = document.getElementById("contentHere1");
+        return contentHere = document.getElementById("contentHere");
 
     } else if (selectList.selectedIndex == 1) 
     {
