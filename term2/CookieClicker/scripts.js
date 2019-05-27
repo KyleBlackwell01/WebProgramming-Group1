@@ -1,5 +1,7 @@
-var clicker = document.getElementById("clicker");
-var counter = document.getElementById("counter");
+const clicker = document.getElementById("clicker");
+const counter = document.getElementById("counter");
+const myList = document.getElementById("myList");
+
 
 
 counter.value = 0;
@@ -12,3 +14,10 @@ clicker.addEventListener("click", function(){
     counter.value = counter.value + 1;
     counter.innerHTML = "Total: " + counter.value;
 });
+
+
+
+
+
+
+var newListItemButton = document.createElement("button");
