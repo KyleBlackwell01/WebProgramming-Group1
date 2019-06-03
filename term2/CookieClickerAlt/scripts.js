@@ -9,6 +9,15 @@
 // }, 5000);
 
 
+
+var upgrades = {
+    clicker: 0,
+    grandma: 0,
+
+    superBaker: 0
+}
+
+
 var myTodoItem = {
     title: "Hello World",
     completed: true
