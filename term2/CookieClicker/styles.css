@@ -1,9 +1,12 @@
+body{
+    margin: 0; 
+}
+
 .cookie {
-    float: left;
+    display: inline-block;
 }
 
 .Upgrades {
-    float: right;
-    right: 50%;
-    position: relative;
+    display: inline-block;
+    padding: 10%;
 }
