@@ -1,66 +1,25 @@
 const clicker = document.getElementById("clicker");
 const counter = document.getElementById("counter");
 const myList = document.getElementById("myList");
-var testUpgrade = document.getElementById("testUpgrade");
-var testT = document.getElementById("test");
-var testA = document.getElementById("test2");
-var testB = document.getElementById("test3");
-var testC = document.getElementById("test4");
+var Upgrade = document.getElementById("Upgrade");
+var Up1 = document.getElementById("Up1");
+var Up2 = document.getElementById("Up2");
+var Up3 = document.getElementById("Up3");
+var Up4 = document.getElementById("Up4");
 var audio = new Audio('Wassap.mp3');
 var hAudio = new Audio('hhh.mp3');
 
 
 counter.value = 0,
-counter.innerHTML = "Bits: " + counter.value;
+    counter.innerHTML = "Bits: " + counter.value;
 
 
-testT.onclick = test;
-testA.onclick = test2;
-testB.onclick = test3;
-testC.onclick = test4;
-// clicker.onclick = mySounds;
+Up1.onclick = upgrade1;
+Up2.onclick = upgrade2;
+Up3.onclick = upgrade3;
+Up4.onclick = upgrade4;
 
 var AUDIO_CLIPS = 42;
-
-
-// function mySounds() {
-//     var x = Math.floor((Math.random() * 2) + 1);
-//       var sound = new Audio();
-//     switch (x) {
-//         case 1:
-//             sound.src = "hhh.mp3";
-//             break;
-//         case 2:
-//             sound.src = "Wassap.mp3";
-//             sound.currentTime = 4;
-//             break;
-//         case 3:
-//             sound.src = "";
-//             break;
-//         case 4:
-//             sound.src = "";
-//             break;
-//         case 5:
-//             sound.src = "";
-//             break;
-//         case 6:
-//             sound.src = "";
-//             break;
-//         case 7:
-//             sound.src = "";
-//             break;
-//         case 8:
-//             sound.src = "";
-//             break;
-//         case 9:
-//             sound.src = "";
-//             break;
-//         case 10:
-//             sound.src = "";
-//             break;
-//     }
-//       sound.play();
-// }
 
 
 
@@ -79,53 +38,42 @@ clicker.addEventListener("click", function() {
 
     console.log();
     counter.value = counter.value + 1,
-    counter.innerHTML = "Bits: " + counter.value;
+        counter.innerHTML = "Bits: " + counter.value;
 
 });
-
-
-// function Clickbaits(){
-//     counter.innerHTML = "Total: " + counter.value;
-//     counter.value = counter.value + 1;
-//     console.log(Clickbaits);
-// };
-
-// setTimeout(function(){
-//     clearInterval(timerId);
-// }, 5000);
 
 
 var Clickbaits = {
     title: "Clickbaits",
     total: 0,
-    Upgrade: function(){
+    Upgrade: function() {
         return counter.value = counter.value + 1,
-        counter.innerHTML = "Bits: " + counter.value;
+            counter.innerHTML = "Bits: " + counter.value;
     },
 
 };
 var NOTASCAM = {
     title: "Not a Scam!",
-    total: 0 ,
-    Upgrade: function(){
+    total: 0,
+    Upgrade: function() {
         return counter.value = counter.value + 2,
-        counter.innerHTML = "Bits: " + counter.value;
+            counter.innerHTML = "Bits: " + counter.value;
     }
 }
 
 var MMM = {
     title: "mmh mmh NO NO NOH",
     total: 0,
-    Upgrade: function(){
+    Upgrade: function() {
         return counter.value = counter.value + 100,
-        counter.innerHTML = "Bits: " + counter.value;
+            counter.innerHTML = "Bits: " + counter.value;
     }
 }
 
 var Carlos = {
     title: "CarlosUltimatos!",
     total: 0,
-    Upgrade: function(){
+    Upgrade: function() {
         return counter.value = counter.value + 1400;
     }
 }
@@ -141,44 +89,35 @@ var Upgrades = [
 
 console.log(Clickbaits);
 
-function test(){
-    if(counter.value >= 15)
-    {
+function upgrade1() {
+    if (counter.value >= 15) {
         Clickbaits.total = Clickbaits.total + 1;
         counter.value = counter.value - 15;
         counter.innerHTML = "Bits: " + counter.value;
         setInterval(Clickbaits.Upgrade, 10000)
-    }
-    else
-    {
+    } else {
         Clickbaits.total = Clickbaits.total;
     }
 }
 
-function test2(){
-    if(counter.value >= 100)
-    {
+function upgrade2() {
+    if (counter.value >= 100) {
         NOTASCAM.total = NOTASCAM.total + 1;
         counter.value = counter.value - 100;
         counter.innerHTML = "Bits: " + counter.value;
         setInterval(NOTASCAM.Upgrade, 1000);
-    }
-    else
-    {
+    } else {
         NOTASCAM.total = NOTASCAM.total;
     }
 }
 
-function test3(){
-    if(counter.value >= 1000)
-    {
+function upgrade3() {
+    if (counter.value >= 1000) {
         MMM.total = MMM.total + 1;
         counter.value = counter.value - 100;
         counter.innerHTML = "Bits: " + counter.value;
         setInterval(MMM.Upgrade, 1000);
-    }
-    else
-    {
+    } else {
         MMM.total = MMM.total;
     }
 }
@@ -190,7 +129,7 @@ function test3(){
 //         counter.value = counter.value - 10000;
 //         counter.innerHTML = "Bits: " + counter.value;
 //         setInterval(Carlos.Upgrade, 1000);
-        
+
 //     }
 //     else
 //     {
@@ -198,24 +137,23 @@ function test3(){
 //     }
 // }
 
-function test4(){
-    if(counter.value >= 10000)
-    {
+function upgrade4() {
+    if (counter.value >= 10000) {
         Carlos.total = Carlos.total + 1;
-        setTimeout(function(){
+        setTimeout(function() {
             clearInterval(Clickbaits.Upgrade, NOTASCAM.Upgrade, MMM.Upgrade);
         }, 100);
-        counter.value = counter.value - 10000;
+        Clickbaits.total = 0;
+        NOTASCAM.total = 0;
+        MMM.total = 0;
+        counter.value = 0;
         counter.innerHTML = "You win, enjoy!";
         hAudio.play();
-        setTimeout(function()
-            {
-                window.open('https://www.youtube.com/watch?v=lCcwn6bGUtU', );
-            }, 2000);
-        
-    }
-    else
-    {
+        setTimeout(function() {
+            window.open('https://www.youtube.com/watch?v=lCcwn6bGUtU', );
+        }, 2000);
+
+    } else {
         Carlos.total = Carlos.total;
     }
 }
@@ -223,7 +161,4 @@ console.log(test);
 
 
 
-var newListItemButton = document.createElement("button");
-
-
-
+// var newListItemButton = document.createElement("button");
